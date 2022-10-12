@@ -1,13 +1,22 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Button, ButtonProps } from './Button'
+import { Checkbox, CheckboxProps } from './Checkbox'
+import { Text } from './Text'
 
 export default {
-  title: 'Components/Button',
-  component: Button,
-  args: {
-    children: 'Create account',
-  },
+  title: 'Components/Checkbox',
+  component: Checkbox,
+  args: {},
   argTypes: {},
-} as Meta<ButtonProps>
+  decorators: [
+    (Story) => {
+      return (
+        <div className={'flex items-center gap-2'}>
+          {Story()}
+          <Text size={'sm'}>Lembrarme de mim por 30 dias</Text>
+        </div>
+      )
+    },
+  ],
+} as Meta<CheckboxProps>
 
-export const Default: StoryObj<ButtonProps> = {}
+export const Default: StoryObj<CheckboxProps> = {}
