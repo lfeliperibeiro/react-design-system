@@ -9,4 +9,4 @@ Licence MIT
 
 storybook project address : https://lfeliperibeiro.github.io/react-design-system/?path=/story/components-heading--default
 
-## Enjoy!
+Enjoy!
